@@ -1,13 +1,12 @@
 function solution(myString, pat) {
-    let arrString = myString.split("");
-
-    for(let i = myString.length-1; i >= 0; i--) {
-        if(arrString[arrString.length-1] !== pat[pat.length-1]) {
+    var answer = '';
+    for(let i = 0; i < myString.length; i++) {
+        if(myString[i].includes(pat)) {
             
-            arrString.pop();
+            answer = myString[i]
             
         }
-
+        console.log(myString[i]);
     }
-    return arrString.join('');
+    return answer;
 }
